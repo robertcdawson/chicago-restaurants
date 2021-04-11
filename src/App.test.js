@@ -19,3 +19,9 @@ test('renders search button', () => {
   const searchButton = screen.getByRole('button');
   expect(searchButton).toBeInTheDocument();
 });
+
+test('renders test search result', () => {
+  render(<App />);
+  const searchResultTest = screen.getByText('List Item 1');
+  expect(searchResultTest).toBeInTheDocument();
+});

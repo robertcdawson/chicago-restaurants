@@ -1,4 +1,5 @@
 import SearchField from './SearchField';
+import SearchResults from './SearchResults';
 import './App.scss';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         <h1>Find Food Fast in the <em>Windy City</em></h1>
       </header>
       <SearchField />
+      <SearchResults />
     </div>
   );
 }
