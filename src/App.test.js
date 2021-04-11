@@ -1,8 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders page title', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const pageTitle = screen.getByRole('heading');
+  expect(pageTitle).toBeInTheDocument();
+  expect(pageTitle).toHaveTextContent('Find Food Fast in the Windy City');
+});
+
+test('renders search field', () => {
+  render(<App />);
+  const searchField = screen.getByRole('searchbox');
+  expect(searchField).toBeInTheDocument();
+});
+
+test('renders search button', () => {
+  render(<App />);
+  const searchButton = screen.getByRole('button');
+  expect(searchButton).toBeInTheDocument();
 });

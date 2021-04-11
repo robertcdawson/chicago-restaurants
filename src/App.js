@@ -1,12 +1,13 @@
-import logo from './logo.svg';
+import SearchField from './SearchField';
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Find Food Fast in the Windy City</h1>
+    <div className="app">
+      <header className="app-header">
+        <h1>Find Food Fast in the <em>Windy City</em></h1>
       </header>
+      <SearchField />
     </div>
   );
 }

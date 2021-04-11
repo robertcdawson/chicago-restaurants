@@ -1,14 +1,65 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+// Colors
+$page-background-color: #fbfbfb;
+$page-title-color: #bababa;
+$body-copy-color: #b8b8b8;
+
+// Mixins
+@mixin box-shadow {
+  box-shadow: 0px 0px 20px 0px #d7d7d7;
 }
 
-.App-header {
-  background-color: white;
-  min-height: 100vh;
+body {
+  background: $page-background-color;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.app {
+  text-align: center;
+  .app-header {
+    background-color: white;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      text-align: left;
+      width: 70vw;
+      min-width: 400px;
+      font-size: 1.7rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $page-title-color;
+    }
+  }
+}
+
+.search-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  align-items: center;
+  gap: 15px;
+  margin: 80px 0 0 0;
+  .site-search-field {
+    height: 50px;
+    width: 500px;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    color: $body-copy-color;
+    &::placeholder {
+      color: $body-copy-color;
+    }
+    @include box-shadow;
+  }
+  .site-search-button {
+    width: 50px;
+    height: auto;
+    border-radius: 10px;
+    @include box-shadow;
+  }
 }
