@@ -10,11 +10,17 @@ $body-copy-color: #b8b8b8;
   box-shadow: 0px 0px 20px 0px #d7d7d7;
 }
 
+// Global styles
 body {
   background: $page-background-color;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 20px;
+}
+
+a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0px 3px 0px 5px;
 }
 
 .app {
@@ -38,6 +44,7 @@ body {
   }
 }
 
+// Search field styles
 .search-container {
   display: flex;
   justify-content: center;
@@ -65,6 +72,7 @@ body {
   }
 }
 
+// Search results styles
 .search-results {
   display: grid;
   justify-content: center;
@@ -79,5 +87,9 @@ body {
     @include box-shadow;
     text-align: left;
     color: $body-copy-color;
+    .show-detail {
+      text-decoration: none;
+      font-size: 1rem;
+    }
   }
 }

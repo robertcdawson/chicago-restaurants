@@ -1,10 +1,14 @@
 import './App.scss';
 
 function SearchField(props) {
+  // Update onChange prop when search field value changes
+  // Lifted up to handleChange function in App.js
   const handleChange = (event) => {
     props.onChange(event.target.value);
   };
 
+  // Handle search form submission
+  // Lifted up to handleSubmit function in App.js
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit();
