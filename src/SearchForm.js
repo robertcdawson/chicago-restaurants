@@ -1,6 +1,6 @@
 import './App.scss';
 
-function SearchField(props) {
+function SearchForm(props) {
   // Update onChange prop when search field value changes
   // Lifted up to handleChange function in App.js
   const handleChange = (event) => {
@@ -22,4 +22,4 @@ function SearchField(props) {
   );
 }
 
-export default SearchField;
+export default SearchForm;

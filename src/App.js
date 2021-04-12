@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import SearchField from './SearchField';
+import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
 import './App.scss';
 
@@ -54,7 +54,7 @@ function App() {
       <header className="app-header">
         <h1>Find Food Fast in the <em>Windy City</em></h1>
       </header>
-      <SearchField searchFieldValue={searchValue} onChange={handleChange} onSubmit={handleSubmit} />
+      <SearchForm searchFieldValue={searchValue} onChange={handleChange} onSubmit={handleSubmit} />
       <SearchResults filteredApiData={filteredApiData} searchValue={searchValue} />
     </div>
   );
