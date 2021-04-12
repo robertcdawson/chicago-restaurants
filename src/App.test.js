@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
 test('renders page title', () => {
@@ -18,10 +19,4 @@ test('renders search button', () => {
   render(<App />);
   const searchButton = screen.getByRole('button');
   expect(searchButton).toBeInTheDocument();
-});
-
-test('renders test search result', () => {
-  render(<App />);
-  const searchResultTest = screen.getByText('List Item 1');
-  expect(searchResultTest).toBeInTheDocument();
 });

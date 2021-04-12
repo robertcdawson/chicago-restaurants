@@ -1,9 +1,16 @@
 import './App.scss';
 
-function SearchResults() {
+function SearchResults(props) {
   return (
     <div className="search-results">
-      <div className="search-result">List Item 1</div>
+      {props.filteredApiData.map((item, index) => {
+        return (
+          <div key={index} className="search-result">
+            <p>{item.aka_name}</p>
+            <p>{item.address}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
