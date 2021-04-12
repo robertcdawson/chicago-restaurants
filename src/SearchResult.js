@@ -17,8 +17,10 @@ function SearchResult(props) {
 
   let detailsCallToAction = !showDetail ? "view more" : "view less";
 
+  const searchResultClass = !showDetail ? "search-result" : "search-result open";
+
   return (
-    <div key={props.index} className="search-result">
+    <div key={props.index} className={searchResultClass}>
       <p>{props.item.aka_name} <a href="#" className="show-detail" onClick={viewRestaurantDetails}>({detailsCallToAction})</a></p>
       {showDetail && <div className="detail">
         <p>{props.item.address}</p>
