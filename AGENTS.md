@@ -8,7 +8,7 @@ Chicago Restaurants — a Create React App (React 17) frontend. Single service, 
 
 ### Node.js version
 
-This project requires **Node.js 14** (`nvm use 14`). The `node-sass` v5 dependency has native bindings that fail to compile on Node >= 16. The VM's `nvm` default is set to 14 by the update script.
+This project requires **Node.js 20** (`nvm use 20`). The VM's `nvm` default is set to 20 by the update script.
 
 ### Commands
 
